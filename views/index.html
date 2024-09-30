@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Where am I?</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      html,
+      body,
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script>
+      $(document).ready(function () {
+        const center = [46, 7];
+        // Create the map
+        var map = L.map("map").setView(center, 2);
+
+        // marker
+        const markerIcon = L.icon({
+          iconSize: [80, 80],
+          iconAnchor: [32, 80],
+          popupAnchor: [2, -40],
+          // specify the path here
+          iconUrl:
+            "https://cdn.glitch.global/6c31fb7f-564c-4070-b8a2-6a84d079e5cd/koala-4373467_640.png?v=1727655948257",
+        });
+        var marker = L.marker(
+          center,
+          {
+            draggable: true, // Make the icon draggable
+            title: "I am here", // Add a title
+            opacity: 0.99,
+            icon: markerIcon, // here assign the markerIcon var
+          } // Adjust the opacity
+        );
+
+        // Set up the OSM layer
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          attribution:
+            '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        }).addTo(map);
+
+        let locationBox = L.Control.extend({
+          onAdd: function () {
+            var box = L.DomUtil.create("div");
+            box.id = "my-location";
+            box.innerHTML =
+              "<button id='find-me'>Show my location</button><br/>" +
+              "<p id='status'> ---</p>";
+            return box;
+          },
+        });
+
+        let bbox = L.Control.extend({
+          options: {
+            position: "bottomleft",
+            buttonText: "Show my location",
+          },
+          setButtonText(text) {
+            this.options.buttonText = text;
+          },
+          onAdd: function (map) {
+            let boxContainer = L.DomUtil.create("div", "box-container");
+            let boxButton = L.DomUtil.create(
+              "button",
+              "box-button",
+              boxContainer
+            );
+            let boxText = L.DomUtil.create("div", "box-text", boxContainer);
+            boxButton.innerText = this.options.buttonText;
+            boxButton.addEventListener("click", geoFindMe);
+            boxText.id = "my-location";
+            boxText.textContent = "";
+            return boxContainer;
+          },
+        });
+        new bbox({ position: "bottomleft" }).addTo(map);
+
+        /* thanks to https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples */
+        function geoFindMe() {
+          const myLocation = document.querySelector("#my-location");
+
+          function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const accuracy = position.coords.accuracy;
+            var myLatLng = new L.LatLng(latitude, longitude);
+            map.flyTo(myLatLng, 16, {
+              animate: true,
+              duration: 4, // in seconds
+            });
+            if (!marker) {
+              marker = L.marker(myLatLng);
+            } else {
+              marker.setLatLng(myLatLng);
+            }
+            marker.addTo(map);
+            map.on("zoomend", function () {
+              L.circle([latitude, longitude], {
+                radius: accuracy,
+                fillColor: "#FFE8D5",
+                stroke: false,
+                fillOpacity: 0.5,
+              }).addTo(map);
+            });
+
+            myLocation.textContent = `Lat: ${latitude.toFixed(
+              2
+            )} Lon: ${longitude.toFixed(2)} (more or less ${Math.round(
+              accuracy
+            )} meters.)`;
+            return latitude, longitude;
+          }
+          function error(err) {
+            console.warn(`ERROR(${err.code}): ${err.message}`);
+            myLocation.textContent = `Unable to retrieve your location: ${err.message}`;
+          }
+          if (!navigator.geolocation) {
+            myLocation.textContent =
+              "Geolocation is not supported by your browser";
+          } else {
+            myLocation.textContent = "Locating…";
+            navigator.geolocation.getCurrentPosition(success, error, {
+              timeout: 5000,
+            });
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
