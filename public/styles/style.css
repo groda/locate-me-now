@@ -1,0 +1,25 @@
+.box-button {
+  background-color: rgba(252, 69, 3, 1);
+  color: white;
+}
+
+.box-text {
+  background-color: white;
+  color: #fc4503;
+  line-height: normal;
+  visibility: hidden;
+}
+
+.box-button,
+.box-text {
+  border: none;
+  padding: 4px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+}
