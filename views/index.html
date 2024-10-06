@@ -4,7 +4,6 @@
     <title>Where am I?</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta charset="utf-8" />
-
     <style>
       body {
         padding: 0;
@@ -31,6 +30,13 @@
       integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://cdn.glitch.global/6c31fb7f-564c-4070-b8a2-6a84d079e5cd/koala-4373467_640icon.png?v=1728243254290"
+      type="image/x-icon"
     />
 
     <script>
@@ -99,19 +105,29 @@
           },
         });
         new bbox({ position: "bottomleft" }).addTo(map);
+        let circle = L.circle([0, 0], {
+          radius: 0,
+          fillColor: "#FC4503",
+          stroke: false,
+          fillOpacity: 0.2,
+        });
 
         /* thanks to https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API/Using_the_Geolocation_API#examples */
         function geoFindMe() {
           const myLocation = document.querySelector("#my-location");
-
+          myLocation.style.visibility = "visible";
+          const duration = 0;
           function success(position) {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
             const accuracy = position.coords.accuracy;
             var myLatLng = new L.LatLng(latitude, longitude);
+            map.on("zoomstart", function () {
+              myLocation.textContent = "Locating…";
+            });
             map.flyTo(myLatLng, 16, {
               animate: true,
-              duration: 4, // in seconds
+              duration: duration, // in seconds
             });
             if (!marker) {
               marker = L.marker(myLatLng);
@@ -120,19 +136,14 @@
             }
             marker.addTo(map);
             map.on("zoomend", function () {
-              L.circle([latitude, longitude], {
-                radius: accuracy,
-                fillColor: "#FFE8D5",
-                stroke: false,
-                fillOpacity: 0.5,
-              }).addTo(map);
+              circle.setRadius(accuracy);
+              circle.setLatLng([latitude, longitude]);
+              circle.addTo(map);
+              myLocation.textContent = `Lat: ${latitude.toFixed(2)}
+                                        Lon: ${longitude.toFixed(2)}
+                                        (±${Math.round(accuracy)} meters)`;
             });
 
-            myLocation.textContent = `Lat: ${latitude.toFixed(
-              2
-            )} Lon: ${longitude.toFixed(2)} (more or less ${Math.round(
-              accuracy
-            )} meters.)`;
             return latitude, longitude;
           }
           function error(err) {
@@ -146,6 +157,17 @@
             myLocation.textContent = "Locating…";
             navigator.geolocation.getCurrentPosition(success, error, {
               timeout: 5000,
+            });
+          }
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+</html>
+ timeout: 5000,
             });
           }
         }
