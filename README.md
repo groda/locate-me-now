@@ -10,6 +10,8 @@ Simply click the link below to run the app on Glitch:
 
 [**Locate Me Now on Glitch**](https://locate-me-now.glitch.me/) 🚀
 
+> **Note:** The app is hosted on **Glitch**, which will be shutting down its app hosting infrastructure soon. Please refer to the [announcement](https://blog.glitch.com/post/changes-are-coming-to-glitch/) for more details. In the future, I might need to consider migrating to another hosting platform. 💡
+
 ## 💻 Run on Your Local Machine
 
 This guide is for **Mac OS**. Follow these steps to run the app locally on your machine:
