@@ -85,6 +85,6 @@ This guide is for **Mac OS**. Follow these steps to run the app locally on your 
 
 ## 🛰️ How It Works
 
-The app uses the **Geolocation API** provided by modern browsers to determine your current location. It leverages the getCurrentPosition() function, which you can learn more about in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition). This function retrieves the geographic location of your device, allowing the app to display your position on a map! 🌍📍
+The app uses the **Geolocation API** provided by modern browsers to determine your current location. It leverages the `getCurrentPosition()` function, which you can learn more about in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition). This function retrieves the geographic location of your device, allowing the app to display your position on a map! 🌍📍
 
 
