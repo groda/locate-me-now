@@ -2,7 +2,7 @@
   "//1": "describes your app and its dependencies",
   "//2": "https://docs.npmjs.com/files/package.json",
   "//3": "updating this file will download and update your packages",
-  "name": "my-gomix-app",
+  "name": "my-codesandbox-app",
   "version": "0.0.1",
   "description": "What am I about?",
   "main": "server.js",
@@ -10,17 +10,19 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.21.0"
+    "express": "^4.21.x"
   },
   "engines": {
-    "node": "16.x"
+    "//1": "currently supported version on codesandbox is 20.12.1",
+    "node": "20.x"
   },
   "repository": {
+    "type": "git",
     "url": "https://gomix.com/#!/project/welcome-project"
   },
   "keywords": [
     "node",
-    "gomix",
-    "express"
+    "Geolocation API",
+    "leafletjs"
   ]
 }
