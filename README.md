@@ -4,7 +4,11 @@
 
 Show your current location on a map 🌍.
 
-## 🌐 Run on Glitch
+## 🌐 Run in CodeSandbox
+
+[![Edit my-codesandbox-app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/groda/locate-me-now?embed=1)
+
+## ~~🌐 Run on Glitch~~ 
 
 Simply click the link below to run the app on Glitch:
 
