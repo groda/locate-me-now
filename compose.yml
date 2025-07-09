@@ -1,0 +1,15 @@
+# compose.yaml
+version: '3.8'
+
+services:
+  locate-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Host_Port:Container_Port
+    volumes:
+      - .:/app # Mount your local code into the container
+      - /app/node_modules # Keep node_modules inside the container
+    command: npm start # Or 'node server.js' if you prefer
+

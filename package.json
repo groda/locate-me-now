@@ -10,7 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.21.x"
+    "express": "^4.21.2"
   },
   "engines": {
     "//1": "currently supported version on codesandbox is 20.12.1",

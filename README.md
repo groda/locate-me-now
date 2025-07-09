@@ -8,13 +8,52 @@ Show your current location on a map 🌍.
 
 [![Edit my-codesandbox-app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/groda/locate-me-now?embed=1)
 
-## ~~🌐 Run on Glitch~~ 
+## 🐳 Run in Docker 
 
-Simply click the link below to run the app on Glitch:
+To run the app in a Docker container on your machine:
 
-[**Locate Me Now on Glitch**](https://locate-me-now.glitch.me/) 🚀
+1. **Install Docker**
 
-> **Note:** The app is hosted on **Glitch**, which will be shutting down its app hosting infrastructure soon. Please refer to the [announcement](https://blog.glitch.com/post/changes-are-coming-to-glitch/) for more details. In the future, I might need to consider migrating to another hosting platform. 💡
+[https://docs.docker.com/desktop/] runs on Linux, Mac, and Windows.
+
+2. **Clone the Repository**
+
+   Clone the repo to your local machine:
+
+   ```bash
+   git clone https://github.com/groda/locate-me-now.git
+   ```
+
+3. **Change Directory**
+
+   Navigate into the project directory:
+
+   ```bash
+   cd locate-me-now
+   ```
+
+4. **Build the image and launch the container**
+
+```
+docker compose up --build -d
+```
+
+5. **Open [http://localhost:3000/](http://localhost:3000/) in your browser
+
+The port $3000$ is hard-coded in `Dockerfile`, `compose.yml`, and in `server.js`.
+
+6. **Stop/restart**
+
+Stop the container with:
+```
+docker compose down
+```
+
+Start (without re-building image):
+
+```
+docker compose up -d
+```
 
 ## 💻 Run on Your Local Machine
 
@@ -84,8 +123,16 @@ This guide is for **Mac OS**. Follow these steps to run the app locally on your 
 7. **Access the App**
 
    Once the app starts, you should see a message like:
-   `Your app is listening on port 59257` (port number may vary).
-   Open [http://127.0.0.1:59257](http://127.0.0.1:59257) in your browser to view the app in action! 🌐
+   `Your app is listening on port 3000`.
+   Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser to view the app in action! 🌐
+
+## ~~🌐 Run on Glitch~~ 
+
+Simply click the link below to run the app on Glitch:
+
+[**Locate Me Now on Glitch**](https://locate-me-now.glitch.me/) 🚀
+
+> **Note:** The app is hosted on **Glitch**, which will be shutting down its app hosting infrastructure soon. Please refer to the [announcement](https://blog.glitch.com/post/changes-are-coming-to-glitch/) for more details. In the future, I might need to consider migrating to another hosting platform. 💡
 
 ## 🛰️ How It Works
 

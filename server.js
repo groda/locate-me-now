@@ -27,6 +27,12 @@ app.get("/*", function (request, response) {
 });
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
+// Define the port your app will listen on.
+// It will try to use process.env.PORT if available (which we'll set in Docker Compose),
+// otherwise, it will default to 3000.
+const PORT = process.env.PORT || 3000; 
+
+// Use the 'PORT' constant you defined, which includes the fallback
+var listener = app.listen(PORT, function () {
+  console.log(`Your app is listening on port ${PORT}`);
 });
