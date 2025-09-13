@@ -1,0 +1,8 @@
+services:
+  # The Node.js web service
+  - type: web
+    name: locate-me-now
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+    plan: free
