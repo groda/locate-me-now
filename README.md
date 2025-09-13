@@ -4,6 +4,10 @@
 
 Show your current location on a map 🌍.
 
+## 🌐 Run in Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/groda/locate-me-now)
+
 ## 🌐 Run in CodeSandbox
 
 [![Edit my-codesandbox-app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/groda/locate-me-now?embed=1)
