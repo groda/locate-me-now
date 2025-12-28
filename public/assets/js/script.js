@@ -1,46 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Where am I?</title>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta charset="utf-8" />
-    <style>
-      body {
-        padding: 0;
-        margin: 0;
-      }
-      html,
-      body,
-      #map {
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"
-      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css"
-      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <link
-      id="favicon"
-      rel="icon"
-      href="https://cdn.glitch.global/6c31fb7f-564c-4070-b8a2-6a84d079e5cd/koala-4373467_640icon.png?v=1728243254290"
-      type="image/x-icon"
-    />
-
-    <script>
-      $(document).ready(function () {
+$(document).ready(function () {
         const center = [46, 7];
         // Create the map
         var map = L.map("map").setView(center, 2);
@@ -161,20 +119,5 @@
           }
         }
       });
-    </script>
-  </head>
-  <body>
-    <div id="map"></div>
-  </body>
-</html>
- timeout: 5000,
-            });
-          }
-        }
-      });
-    </script>
-  </head>
-  <body>
-    <div id="map"></div>
-  </body>
-</html>
+
+  

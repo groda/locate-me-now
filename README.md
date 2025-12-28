@@ -38,13 +38,21 @@ To run the app in a Docker container on your machine:
 
 4. **Build the image and launch the container**
 
-```
-docker compose up --build -d
-```
+- For development only:
+  
+  ```
+  docker compose up --build
+  ```
+
+- In production:
+  
+  ```
+   docker compose -f compose.prod.yaml up --build -d
+   ```
 
 5. **Open [http://localhost:3000/](http://localhost:3000/) in your browser
 
-The port $3000$ is hard-coded in `Dockerfile`, `compose.yml`, and in `server.js`.
+The port $3000$ is hard-coded in `Dockerfile`, `compose.yml`, `compose.prod.yml`, and in `server.js`.
 
 6. **Stop/restart**
 

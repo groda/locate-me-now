@@ -1,28 +1,37 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "my-codesandbox-app",
-  "version": "0.0.1",
-  "description": "What am I about?",
+  "name": "locate-me-now",
+  "version": "1.0.0",
+  "description": "An interactive map app that locates your position now using Leaflet.js and the Geolocation API.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
+  "keywords": [
+    "leaflet",
+    "map",
+    "geolocation",
+    "locate-me",
+    "express",
+    "node"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.21.2"
   },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
   "engines": {
-    "//1": "currently supported version on codesandbox is 20.12.1",
-    "node": "20.x"
+    "node": ">=18.x"
   },
   "repository": {
     "type": "git",
-    "url": "https://gomix.com/#!/project/welcome-project"
+    "url": "git+https://github.com/groda/locate-me-now.git"
   },
-  "keywords": [
-    "node",
-    "Geolocation API",
-    "leafletjs"
-  ]
+  "bugs": {
+    "url": "https://github.com/groda/locate-me-now/issues"
+  },
+  "homepage": "https://github.com/groda/locate-me-now#readme"
 }
