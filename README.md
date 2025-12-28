@@ -167,5 +167,8 @@ The app was previously hosted on Glitch:
 
 > **Note:** Glitch shut down its free app hosting in 2025. This link is kept for historical reference.
 
+## 💭 A Bit of jQuery Nostalgia
 
+Feeling nostalgic about the old web days?  
+Check out [`NOSTALGIA.md`](NOSTALGIA.md) for a short reflection on why removing jQuery felt a little bittersweet.
 
