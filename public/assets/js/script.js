@@ -1,25 +1,30 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function() {
         const center = [46, 7];
         // Create the map
         var map = L.map("map").setView(center, 2);
 
         // marker
         const markerIcon = L.icon({
+          iconUrl: "assets/images/koala-4373467_640.png",
+
           iconSize: [80, 80],
           iconAnchor: [32, 80],
           popupAnchor: [2, -40],
-          // specify the path here
-          iconUrl:
-            "https://cdn.glitch.global/6c31fb7f-564c-4070-b8a2-6a84d079e5cd/koala-4373467_640.png?v=1727655948257",
+          
+          // Added: classic Leaflet shadow (looks great under the koala)
+          shadowUrl:    'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+          shadowSize:   [41, 41],    // default shadow size
+          shadowAnchor: [32, 41]     // aligned to match your iconAnchor horizontally
         });
+        
         var marker = L.marker(
           center,
           {
             draggable: true, // Make the icon draggable
             title: "I am here", // Add a title
-            opacity: 0.99,
+            opacity: 0.99, // Adjust the opacity
             icon: markerIcon, // here assign the markerIcon var
-          } // Adjust the opacity
+          } 
         );
 
         // Set up the OSM layer
@@ -92,7 +97,7 @@ $(document).ready(function () {
             } else {
               marker.setLatLng(myLatLng);
             }
-            marker.addTo(map);
+            marker.addTo(map).bindPopup("I'm a friendly koala! 🐨");
             map.on("zoomend", function () {
               circle.setRadius(accuracy);
               circle.setLatLng([latitude, longitude]);
