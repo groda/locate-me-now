@@ -11,10 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
           iconAnchor: [32, 80],
           popupAnchor: [2, -40],
           
-          // Added: classic Leaflet shadow (looks great under the koala)
-          shadowUrl:    'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
-          shadowSize:   [41, 41],    // default shadow size
-          shadowAnchor: [32, 41]     // aligned to match your iconAnchor horizontally
         });
         
         var marker = L.marker(

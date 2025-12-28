@@ -1,4 +1,4 @@
-![locate-me-now](https://socialify.git.ci/groda/locate-me-now/image?custom_language=Node.js&font=Source+Code+Pro&language=1&logo=https%3A%2F%2Fcdn.glitch.global%2F6c31fb7f-564c-4070-b8a2-6a84d079e5cd%2Fkoala-4373467_640.png%3Fv%3D1727655948257&name=1&owner=1&pattern=Solid&theme=Light)
+![locate-me-now](https://socialify.git.ci/groda/locate-me-now/image?font=Rokkitt&language=1&logo=https%3A%2F%2Fgithub.com%2Fgroda%2Flocate-me-now%2Fblob%2Fmain%2Fpublic%2Fassets%2Fimages%2Fkoala-4373467_640.png%3Fraw%3Dtrue&name=1&owner=1&pattern=Solid&theme=Light)
 
 # 🚀 Where Am I?
 
