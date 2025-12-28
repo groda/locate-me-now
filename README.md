@@ -4,15 +4,32 @@
 
 Show your current location on a map 🌍.
 
-## 🌐 Run in Render
+Featuring a very serious koala marker 🐨.
+
+👉 [Try it live](https://groda.github.io/locate-me-now/)
+
+## 🛰️ How It Works
+
+The app uses the **Geolocation API** provided by modern browsers to determine your current location. It leverages the `getCurrentPosition()` function, which you can learn more about in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition). This function retrieves the geographic location of your device, allowing the app to display your position on a map! 🌍📍
+
+
+## 🚀 Deployment Options
+
+### 🌍 Live Demo (Static)
+
+👉 [Try it here](https://groda.github.io/locate-me-now/)
+
+*(Fast, client-side only — works directly in your browser, no server needed!)*
+
+### 🌐 Deploy to Render (full Node.js version)
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/groda/locate-me-now)
 
-## 🌐 Run in CodeSandbox
+### 🌐 Open in CodeSandbox
 
 [![Edit my-codesandbox-app](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/groda/locate-me-now?embed=1)
 
-## 🐳 Run in Docker 
+### 🐳 Run with Docker
 
 To run the app in a Docker container on your machine:
 
@@ -67,7 +84,7 @@ Start (without re-building image):
 docker compose up -d
 ```
 
-## 💻 Run on Your Local Machine
+### 💻 Run on Your Local Machine
 
 This guide is for **Mac OS**. Follow these steps to run the app locally on your machine:
 
@@ -138,16 +155,17 @@ This guide is for **Mac OS**. Follow these steps to run the app locally on your 
    `Your app is listening on port 3000`.
    Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your browser to view the app in action! 🌐
 
-## ~~🌐 Run on Glitch~~ 
 
-Simply click the link below to run the app on Glitch:
+> **Why keep the Node.js server?**  
+> The app currently runs fully in the browser (no backend needed), but the Express server, Docker setup, and Render deployment are included as a foundation for future features (e.g., saving locations, user accounts, real-time updates, or API integrations). This way, the project is ready to grow without major refactoring later.
 
-[**Locate Me Now on Glitch**](https://locate-me-now.glitch.me/) 🚀
+## 📜 Historical Hosting (Archived)
 
-> **Note:** The app is hosted on **Glitch**, which will be shutting down its app hosting infrastructure soon. Please refer to the [announcement](https://blog.glitch.com/post/changes-are-coming-to-glitch/) for more details. In the future, I might need to consider migrating to another hosting platform. 💡
+### ~~🌐 Former Glitch Demo~~
+The app was previously hosted on Glitch:  
+[**Locate Me Now on Glitch**](https://locate-me-now.glitch.me/) (no longer active)
 
-## 🛰️ How It Works
+> **Note:** Glitch shut down its free app hosting in 2025. This link is kept for historical reference.
 
-The app uses the **Geolocation API** provided by modern browsers to determine your current location. It leverages the `getCurrentPosition()` function, which you can learn more about in the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/getCurrentPosition). This function retrieves the geographic location of your device, allowing the app to display your position on a map! 🌍📍
 
 
