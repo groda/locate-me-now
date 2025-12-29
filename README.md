@@ -1,5 +1,6 @@
 ![locate-me-now](https://socialify.git.ci/groda/locate-me-now/image?font=Rokkitt&language=1&logo=https%3A%2F%2Fgithub.com%2Fgroda%2Flocate-me-now%2Fblob%2Fmain%2Fpublic%2Fassets%2Fimages%2Fkoala-4373467_640.png%3Fraw%3Dtrue&name=1&owner=1&pattern=Solid&theme=Light)
 
+
 # 🚀 Where Am I?
 
 Show your current location on a map 🌍.
@@ -172,3 +173,21 @@ The app was previously hosted on Glitch:
 Feeling nostalgic about the old web days?  
 Check out [`NOSTALGIA.md`](NOSTALGIA.md) for a short reflection on why removing jQuery felt a little bittersweet.
 
+## Badges 
+
+### ✅ CI & Quality Badges 
+![JS/CSS Lint and HTML validate](https://github.com/groda/color-combinations/actions/workflows/code-quality.yml/badge.svg)
+![Link Check](https://github.com/groda/color-combinations/actions/workflows/link-check.yml/badge.svg)
+![Lighthouse CI](https://github.com/groda/color-combinations/actions/workflows/lighthouse.yml/badge.svg)
+![Gitleaks Secret Scan](https://github.com/groda/color-combinations/actions/workflows/gitleaks.yml/badge.svg)
+
+### 📦 Repo Info
+[![License](https://img.shields.io/github/license/groda/color-combinations)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/groda/color-combinations)](https://github.com/groda/color-combinations/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/groda/color-combinations)](https://github.com/groda/color-combinations)
+[![Contributors](https://img.shields.io/github/contributors/groda/color-combinations)](https://github.com/groda/color-combinations/graphs/contributors)
+![Deploy Pages](https://github.com/groda/color-combinations/actions/workflows/pages.yml/badge.svg)
+
+### 🌟 Social
+[![Stars](https://img.shields.io/github/stars/groda/color-combinations?style=social)](https://github.com/groda/color-combinations/stargazers)
+[![Forks](https://img.shields.io/github/forks/groda/color-combinations?style=social)](https://github.com/groda/color-combinations/network/members)
