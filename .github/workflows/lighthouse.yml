@@ -1,0 +1,10 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lighthouse:
+    uses: groda/gha-workflows/.github/workflows/lighthouse.yml@main
