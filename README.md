@@ -176,18 +176,18 @@ Check out [`NOSTALGIA.md`](NOSTALGIA.md) for a short reflection on why removing 
 ## Badges 
 
 ### ✅ CI & Quality Badges 
-![JS/CSS Lint and HTML validate](https://github.com/groda/color-combinations/actions/workflows/code-quality.yml/badge.svg)
-![Link Check](https://github.com/groda/color-combinations/actions/workflows/link-check.yml/badge.svg)
-![Lighthouse CI](https://github.com/groda/color-combinations/actions/workflows/lighthouse.yml/badge.svg)
-![Gitleaks Secret Scan](https://github.com/groda/color-combinations/actions/workflows/gitleaks.yml/badge.svg)
+![JS/CSS Lint and HTML validate](https://github.com/groda/locate-me-now/actions/workflows/code-quality.yml/badge.svg)
+![Link Check](https://github.com/groda/locate-me-now/actions/workflows/link-check.yml/badge.svg)
+![Lighthouse CI](https://github.com/groda/locate-me-now/actions/workflows/lighthouse.yml/badge.svg)
+![Gitleaks Secret Scan](https://github.com/groda/locate-me-now/actions/workflows/gitleaks.yml/badge.svg)
 
 ### 📦 Repo Info
-[![License](https://img.shields.io/github/license/groda/color-combinations)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/groda/color-combinations)](https://github.com/groda/color-combinations/commits/main)
-[![Top Language](https://img.shields.io/github/languages/top/groda/color-combinations)](https://github.com/groda/color-combinations)
-[![Contributors](https://img.shields.io/github/contributors/groda/color-combinations)](https://github.com/groda/color-combinations/graphs/contributors)
-![Deploy Pages](https://github.com/groda/color-combinations/actions/workflows/pages.yml/badge.svg)
+[![License](https://img.shields.io/github/license/groda/locate-me-now)](LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/groda/locate-me-now)](https://github.com/groda/locate-me-now/commits/main)
+[![Top Language](https://img.shields.io/github/languages/top/groda/locate-me-now)](https://github.com/groda/locate-me-now)
+[![Contributors](https://img.shields.io/github/contributors/groda/locate-me-now)](https://github.com/groda/locate-me-now/graphs/contributors)
+![Deploy Pages](https://github.com/groda/locate-me-now/actions/workflows/pages.yml/badge.svg)
 
 ### 🌟 Social
-[![Stars](https://img.shields.io/github/stars/groda/color-combinations?style=social)](https://github.com/groda/color-combinations/stargazers)
-[![Forks](https://img.shields.io/github/forks/groda/color-combinations?style=social)](https://github.com/groda/color-combinations/network/members)
+[![Stars](https://img.shields.io/github/stars/groda/locate-me-now?style=social)](https://github.com/groda/locate-me-now/stargazers)
+[![Forks](https://img.shields.io/github/forks/groda/locate-me-now?style=social)](https://github.com/groda/locate-me-now/network/members)
