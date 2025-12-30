@@ -36,7 +36,7 @@ To run the app in a Docker container on your machine:
 
 1. **Install Docker**
 
-[https://docs.docker.com/desktop/] runs on Linux, Mac, and Windows.
+   [https://docs.docker.com/desktop/] runs on Linux, Mac, and Windows.
 
 2. **Clone the Repository**
 
@@ -56,34 +56,34 @@ To run the app in a Docker container on your machine:
 
 4. **Build the image and launch the container**
 
-- For development only:
+   - For development only:
   
-  ```
-  docker compose up --build
-  ```
+      ```
+      docker compose up --build
+      ```
 
-- In production:
+   - In production:
   
-  ```
-   docker compose -f compose.prod.yaml up --build -d
-   ```
+      ```
+      docker compose -f compose.prod.yaml up --build -d
+      ```
 
 5. **Open [http://localhost:3000/](http://localhost:3000/) in your browser
 
-The port $3000$ is hard-coded in `Dockerfile`, `compose.yml`, `compose.prod.yml`, and in `server.js`.
+   The port $3000$ is hard-coded in `Dockerfile`, `compose.yml`, `compose.prod.yml`, and in `server.js`.
 
 6. **Stop/restart**
 
-Stop the container with:
-```
-docker compose down
-```
+   Stop the container with:
+   ```
+   docker compose down
+   ```
 
-Start (without re-building image):
+   Start (without re-building image):
 
-```
-docker compose up -d
-```
+   ```
+   docker compose up -d
+   ```
 
 ### 💻 Run on Your Local Machine
 
