@@ -1,5 +1,6 @@
 ![locate-me-now](https://socialify.git.ci/groda/locate-me-now/image?font=Rokkitt&language=1&logo=https%3A%2F%2Fgithub.com%2Fgroda%2Flocate-me-now%2Fblob%2Fmain%2Fpublic%2Fassets%2Fimages%2Fkoala-4373467_640.png%3Fraw%3Dtrue&name=1&owner=1&pattern=Solid&theme=Light)
 
+[![Privacy Notice](https://img.shields.io/badge/Privacy-Notice-important?style=for-the-badge&logo=shield)](PRIVACY-GEOLOCATION.md)
 
 # 🚀 Where Am I?
 
