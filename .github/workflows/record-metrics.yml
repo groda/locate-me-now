@@ -1,4 +1,4 @@
-name: Record clone metrics
+name: Record clone and view metrics
 
 on:
   workflow_dispatch:
