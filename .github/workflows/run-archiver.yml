@@ -1,0 +1,22 @@
+name: Record clone and view metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"   # once per day, quiet time
+
+permissions:
+  contents: read
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 
+      
+      - name: Run Traffic Archiver
+        uses: groda/github-traffic-archiver@v2
+        with:
+          metrics-repo: 'groda/observatory'
+          metrics-pat: ${{ secrets.METRICS_PAT }}
+          # observed-repo defaults to the current repo if omitted
