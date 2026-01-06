@@ -1,0 +1,5 @@
+# exclude these files from the links check. See:
+# https://github.com/lycheeverse/lychee-action?tab=readme-ov-file#excluding-links-from-getting-checked
+http://127.0.0.1:3000/
+http://localhost:3000/
+https://locate-me-now.glitch.me/

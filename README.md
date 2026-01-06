@@ -92,7 +92,7 @@ This guide is for **Mac OS**. Follow these steps to run the app locally on your 
 
 1. **Download Node.js®**
 
-   Get Node.js from [here](https://nodejs.org/en/download/package-manager).
+   Get Node.js from [here](https://nodejs.org/en/download).
    (For Mac, I recommend **v20.17.0 (LTS)** / macOS / using **nvm** for version management.)
 
    Open your terminal and run the following commands:
